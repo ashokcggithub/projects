@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Znod Technologies</title>
+<script type="text/javascript" src="cordova-2.3.0.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+<script type="text/javascript" src="./js/znod-login.js"></script>
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+</head>
+<body>
+	<form id="myform"> 
+		<div data-role="page" id="pLogin">
+			<div data-role="header">
+				<h1>Login</h1>
+			</div>
+			<div data-role="content">
+				<div id="myMap"></div>
+					<label for="username">User Name:</label> <input name="userid" id="username" placeholder="User Name" value="" type="text"
+					data-mini="true" /> 
+					<label for="password">Password:</label> <input name="password" id="password" placeholder="password" value=""
+					type="password" /> 
+					<input type="submit" data-theme="b" value="Login" id="btnLogin" /> 
+					
+					<!-- <a href="#pLnEntry" onclick="login();" data-theme="b" data-role="button"
+						data-inline="true">Login</a> -->
+			</div>
+			<div data-role="footer">
+				<h4>ZNOD </h4>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
