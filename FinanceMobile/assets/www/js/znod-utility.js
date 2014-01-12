@@ -1,9 +1,22 @@
 /**
  * It is all about znod mobile login
  */
-$(document).ready(function () {
-    $("#pLogin").click(function () {
-    	var User = "";
+
+$( document ).on("pageinit", "#pLogin", function() {   
+//$(document).ready(function () {
+	isAuthenticated = false;
+    $("#btnLogin").on("click", function() {
+    	login();
+    	if(isAuthenticated){
+      $.mobile.changePage( "#pLnEntry", {
+        transition: "flip",                          
+      });
+    	}
+    });
+  });
+
+function login() {
+	var User = "";
         try {
             var userId = $("#username").val();
             var pass = $("#password").val();
@@ -38,13 +51,10 @@ $(document).ready(function () {
             alert("[Login error]" + ex);
             return false;
         }
-    });
-}); 
-
-
-
-var ServiceURL = "http://zn.cloudapp.net/serviceclient.asmx";
-var isAuthenticated = false;
+    }
+    
+    var ServiceURL = "http://znod.cloudapp.net/serviceclient.asmx";
+    var isAuthenticated = false;
 
 function commonAjaxCall(methodName, input) {
     var output = "";
@@ -75,3 +85,21 @@ function commonAjaxCall(methodName, input) {
         alert("[commonAjaxCall]" + ex);
     }
 }
+
+
+//$( document ).on("pageinit", "#pLogin", function() {   
+//$(document).ready(function () {
+	//alert("coming inside");
+	//isAuthenticated = false;
+// $("#btnLogin").on("click", function() {
+ //	login();
+ 	/*if(isAuthenticated){
+   $.mobile.changePage( "#pLnEntry", {
+     transition: "flip",                          
+   });
+ 	}
+ 	else{
+ 		alert("authentication false");
+ 	}
+ });
+});*/
