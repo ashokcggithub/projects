@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+.bluebg {
+        position: absolute;
+        width: 176px;
+        height: 29px;
+        left: 90px;
+        top: 104px;
+        font-family:'Times New Roman';
+        text-align: left;
+        color: rgb(0, 0, 0);
+        background-image: none;
+        background-color: rgb(0, 157, 253);
+      }
